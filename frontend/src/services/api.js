@@ -1,0 +1,17 @@
+// src/services/api.js
+import axios from "axios";
+
+const API = axios.create({
+  baseURL: "http://localhost:3000/api",
+});
+
+// Interceptor para agregar el token a cada solicitud
+API.interceptors.request.use((config) => {
+  const token = localStorage.getItem("token"); // recupera el token guardado
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
+
+export default API;

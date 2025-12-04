@@ -4,9 +4,9 @@ const productosCtrl = require('../controllers/productos.controller');
 const verificarToken = require('../middlewares/auth.middleware');
 
 router.get('/', productosCtrl.getProductos);
-router.post('/', verificarToken, productosCtrl.crearProducto);
+router.post('/',  productosCtrl.crearProducto);
 router.get('/:id', productosCtrl.getUnicoProducto);
-router.put('/:id', verificarToken, productosCtrl.editarProducto);
-router.delete('/:id', verificarToken, productosCtrl.eliminarProducto);
+router.put('/:id',  productosCtrl.editarProducto);
+router.delete('/:id',  productosCtrl.eliminarProducto);
 
 module.exports = router;

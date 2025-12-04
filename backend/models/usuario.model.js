@@ -6,7 +6,7 @@ const { Schema } = mongoose;
 const usuarioSchema = new Schema({
   nombre: { type: String, required: true },
   email: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
+  password: { type: String, default: '123456'},
   rol: { type: String, default: 'usuario' }
 }, { timestamps: true });
 

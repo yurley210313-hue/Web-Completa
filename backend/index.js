@@ -7,7 +7,7 @@ require('./database'); // no se quiere todo el archivo sino la conexión
 /** * Se crea una REST API, es la manera de decirle al servidor que reciba y envíe datos  */
 // Configuraciones
 app.use(morgan('dev'));
-app.use(cors({ origin: 'http://localhost:4200' }));
+app.use(cors({ origin: 'http://localhost:3001' }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // rutas de nuestro servidor

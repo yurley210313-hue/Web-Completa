@@ -6,7 +6,7 @@ const authCtrl = {};
 
 authCtrl.register = async (req, res) => {
   try {
-    console.log("📥 Body recibido en register:", req.body); 
+    console.log(" Body recibido en register:", req.body); 
 
     const { nombre, email, password, rol } = req.body;
 
